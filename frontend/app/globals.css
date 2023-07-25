@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Css section 
+
+
+
+*/
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #ff9838;
+}
+.main-container {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 50px auto 50px;
+  grid-template-rows: min-content auto min-content;
+  @apply bg-gray-800 text-primary-color;
+}
+@media only screen and (min-width: 1024px) {
+  .main-container {
+    grid-template-columns: 100px auto 100px;
+  }
+}
+/* Tailwind section */
+
+.movie-list {
+  @apply grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6  gap-4;
+}
+.movie-card {
+  @apply flex justify-between items-center flex-col relative;
+}
+.add-to-watchlist {
+  @apply text-slate-950 bg-secondary-color text-lg p-1 rounded-sm shadow-lg self-start;
+}
+.signup-form {
+  @apply;
+}
